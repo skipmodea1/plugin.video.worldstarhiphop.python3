@@ -16,7 +16,7 @@ import xbmcgui
 import xbmcplugin
 import requests
 
-from worldstarhiphop_const import ADDON, SETTINGS, LANGUAGE, IMAGES_PATH, HEADERS, BASEURL, convertToUnicodeString, log, getSoup
+from resources.lib.worldstarhiphop_const import ADDON, SETTINGS, LANGUAGE, IMAGES_PATH, HEADERS, BASEURL, convertToUnicodeString, log, getSoup
 
 
 

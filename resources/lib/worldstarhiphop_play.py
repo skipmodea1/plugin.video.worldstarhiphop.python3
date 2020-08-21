@@ -10,7 +10,7 @@ from future import standard_library
 standard_library.install_aliases()
 from builtins import str
 from builtins import object
-from worldstarhiphop_const import SETTINGS, LANGUAGE, HEADERS, convertToUnicodeString, log, getSoup
+
 import requests
 import sys
 import urllib.parse
@@ -19,7 +19,7 @@ import xbmcgui
 import xbmcplugin
 import re
 
-
+from resources.lib.worldstarhiphop_const import SETTINGS, LANGUAGE, HEADERS, convertToUnicodeString, log, getSoup
 #
 # Main class
 #
