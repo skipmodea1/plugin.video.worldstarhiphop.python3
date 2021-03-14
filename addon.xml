@@ -17,20 +17,20 @@
 	</extension>
   <extension point="xbmc.addon.metadata">
 	<platform>all</platform>
-	<summary lang="en">Worldstarhiphop is home to everything entertainment and hip hop</summary>
-    <description lang="en">Worldstarhiphop is home to everything entertainment and hip hop</description>
-    <disclaimer lang="en">For bugs, requests or general questions visit the Worldstarhiphop thread on the Kodi forum</disclaimer>
+	<summary lang="en_GB">Worldstarhiphop is home to everything entertainment and hip hop</summary>
+    <description lang="en_GB">Worldstarhiphop is home to everything entertainment and hip hop</description>
+    <disclaimer lang="en_GB">For bugs, requests or general questions visit the Worldstarhiphop thread on the Kodi forum</disclaimer>
     <language>en</language>
     <platform>all</platform>
 	<license>GPL-2.0-or-later</license>
-    <forum>http://forum.kodi.tv/showthread.php?tid=229385</forum>
-    <website>http://worldstarhiphop.com/</website>
+    <forum>https://forum.kodi.tv/showthread.php?tid=229385</forum>
+    <website>https://worldstarhiphop.com/</website>
     <source>https://github.com/skipmodea1/plugin.video.worldstarhiphop.python3</source>
     <assets>
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>v1.0.13 (2030-10-25)
+    <news>v1.0.13 (2020-10-25)
     - changes due to website changes
     </news>
   </extension>

@@ -40,12 +40,9 @@ def convertToByteString(s, encoding='utf-8'):
 
 def log(name_object, object):
     try:
-        xbmc.log("[ADDON] %s v%s (%s) debug mode, %s = %s" % (
-            ADDON, VERSION, DATE, name_object, convertToUnicodeString(object)), xbmc.LOGDEBUG)
+        xbmc.log(f"[ADDON] {ADDON} v{VERSION} ({DATE}) debug mode, {name_object} = {convertToUnicodeString(object)}", xbmc.LOGDEBUG)
     except:
-        xbmc.log("[ADDON] %s v%s (%s) debug mode, %s = %s" % (
-            ADDON, VERSION, DATE, name_object,
-            "Unable to log the object due to an error while converting it to an unicode string"), xbmc.LOGDEBUG)
+        xbmc.log(f"[ADDON] {ADDON} v{VERSION} ({DATE}) debug mode, {name_object} = Unable to log the object due to an error while converting it to an unicode string", xbmc.LOGDEBUG)
 
 
 def getSoup(html, default_parser="html5lib"):
