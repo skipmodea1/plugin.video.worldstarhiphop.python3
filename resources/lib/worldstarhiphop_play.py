@@ -93,9 +93,14 @@ class Main(object):
                 have_valid_url = True
                 video_url = youtube_url
             else:
+                # Extract the URL part before the pipe
+                stream_url_clean = stream_url.split("|User-Agent=")[0]
+
+                log("stream_url_clean:", stream_url_clean)
+
                 # for a video hosted on worldstarhiphop server: play the video file directly
                 have_valid_url = True
-                video_url = stream_url
+                video_url = stream_url_clean
         except:
             unplayable_media_file = True
 
