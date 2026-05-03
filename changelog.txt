@@ -1,5 +1,5 @@
 v1.0.17 (2026-05-01)
-- clean up video url
+- cleaner video url
 
 v1.0.16 (2025-07-01)
 - changes due to website changes

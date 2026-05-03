@@ -31,7 +31,7 @@
       <fanart>resources/fanart.jpg</fanart>
     </assets>
     <news>v1.0.17 (2026-05-01)
-    - clean up video url
+    - cleaner video url
     </news>
   </extension>
 </addon>
