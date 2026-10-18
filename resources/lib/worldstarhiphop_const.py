@@ -19,8 +19,8 @@ BASE_URL_WSHH = "https://worldstarhiphop.com"
 INITIAL_API_VIDEO_URL = "https://api-mobile.worldstar.com/video/feed?daysSize=2&heroVideosSize=3&clean=false&pageCursor="
 INITIAL_API_SEARCH_URL = "https://api-mobile.worldstar.com/search/suggestion?searchTerm=<search_string>&pageSize=40&filter=newest&clean=false"
 IMAGES_PATH = os.path.join(xbmcaddon.Addon().getAddonInfo('path'), 'resources')
-HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-DATE = "2026-05-01"
+HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36'}
+DATE = "2026-10-18"
 VERSION = "1.0.17"
 
 
@@ -72,6 +72,10 @@ def create_video_list_item(video_data, addon_name, images_path, log):
         title_highlight = video_data.get('titleHighlight', '')
         description = video_data.get('description', '')
         duration = video_data.get('duration', 0)
+        if duration == None:
+            duration = 0
+        else:
+            duration = int(duration)
         thumbnail_url = video_data.get('imageUrl', '')
     except KeyError as e:
         log("ERROR", f"Missing key in video data: {e}")
@@ -89,14 +93,13 @@ def create_video_list_item(video_data, addon_name, images_path, log):
         plot = title_highlight
 
     log("plot", plot)
-
-    list_item = xbmcgui.ListItem(title)
-    list_item.setInfo("video", {
-        "title": title,
-        "studio": addon_name,
-        "plot": plot,
-        "duration": duration
-    })
+    
+    list_item = xbmcgui.ListItem(label=title)
+    info = list_item.getVideoInfoTag()
+    info.setMediaType("video")
+    info.setTitle(title)   
+    info.setPlot(plot)   
+    info.setDuration(duration)
     list_item.setArt({
         'thumb': thumbnail_url,
         'icon': thumbnail_url,

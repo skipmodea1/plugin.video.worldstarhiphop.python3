@@ -83,7 +83,9 @@ class Main(object):
                 'icon': '',
                 'fanart': os.path.join(IMAGES_PATH, 'fanart-blur.jpg')
             })
-            search_list_item.setInfo("video", {"Title": search_item_title, "Studio": ADDON})
+            info = search_list_item.getVideoInfoTag()
+            info.setMediaType("video")
+            info.setTitle(search_item_title)   
             xbmcplugin.addDirectoryItem(handle=self.plugin_handle, url=search_item_url, listitem=search_list_item, isFolder=True)
 
         # Get JSON data from the API

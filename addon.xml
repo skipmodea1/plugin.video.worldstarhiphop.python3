@@ -2,10 +2,10 @@
 <addon 
 	id="plugin.video.worldstarhiphop" 
 	name="World Star Hip Hop" 
-	version="1.0.17+matrix.1"
+	version="1.0.17+nexus.1"
 	provider-name="Skipmode A1">
   <requires>
-    <import addon="xbmc.python"                     version="3.0.0"/>
+    <import addon="xbmc.python"                     version="3.0.1"/>
     <import addon="script.module.beautifulsoup4"    version="4.3.2"/>
     <import addon="script.module.requests"          version="2.4.3"/>
     <import addon="script.module.future"            version="0.0.1"/>
@@ -30,8 +30,10 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>v1.0.17 (2026-05-01)
-    - cleaner video url
+    <news>v1.0.17 (2026-10-18)
+	- cleaned up video url
+	- replaced depricated ListItem.setInfo() with InfoTagVideo setters (Kodi 20 Nexus and higher)
+	- updated header	
     </news>
   </extension>
 </addon>

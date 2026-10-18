@@ -1,5 +1,7 @@
-v1.0.17 (2026-05-01)
-- cleaner video url
+v1.0.17 (2026-10-18)
+- cleaned up video url
+- replaced depricated ListItem.setInfo() with InfoTagVideo setters (Kodi 20 Nexus and higher)
+- updated header	
 
 v1.0.16 (2025-07-01)
 - changes due to website changes
